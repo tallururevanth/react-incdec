@@ -39,7 +39,8 @@ class IncDec extends React.Component {
             </h2>
             <h3>{this.state.a}</h3>
             <button onClick={this.aInc}>Increment</button>
-            <button onClick={this.aDec}>Decrement</button>
+            <button onClick={this.aDec}>Decrement</button><br/>
+            <button onClick={()=>{this.setState({a:0})}}>Reset A</button>
           </div>
           <div class="b">
             <h2>
@@ -54,6 +55,9 @@ class IncDec extends React.Component {
               onChange={this.bChange}
             />
             <button onClick={this.bDec}>Decrement</button>
+            <br/>
+            <button onClick={()=>{this.setState({value:0})}}>Clear Value</button>
+            <button onClick={()=>{this.setState({b:0})}}>Reset B</button>
           </div>
         </div>
         <div class="total">
@@ -61,7 +65,7 @@ class IncDec extends React.Component {
             <u>Total</u>
           </h2>
           <h2>{this.state.a + this.state.b}</h2>
-          <button onClick={this.reset}>Reset</button>
+          <button onClick={this.reset}>Reset All</button>
         </div>
       </div>
     );
